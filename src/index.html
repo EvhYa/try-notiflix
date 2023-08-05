@@ -4,11 +4,28 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Page title</title>
+    <link rel="stylesheet" href="./sass/style.css" />
     <link rel="stylesheet" href="./sass/index.scss" />
     <script type="module" src="./index.js"></script>
   </head>
   <body>
+    <button type="button" class="js-button">TRY IT</button>
+
+    <button type="button" class="js-switch switch">
+      <div class="switch-icon">
+        <svg class="icon">
+          <use href="./images/sprite.svg#icon-rectangle-switch-ico"></use>
+        </svg>
+      </div>
+    </button>
+
+    <div class="toggle-switch">
+      <label>
+        <input type="checkbox" />
+        <span class="slider"></span>
+      </label>
+    </div>
     <!-- ❗️❗️❗️ Add partials like so for every page -->
-    <include src="./partials/example.html"></include>
+    <!-- <include src="./partials/example.html"></include> -->
   </body>
 </html>
