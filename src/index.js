@@ -1,5 +1,7 @@
 import Notiflix from 'notiflix';
-// import '@fortawesome/fontawesome-free/css/all.css';
+// fa icons styles
+// npm install @fortawesome/fontawesome-free
+import '@fortawesome/fontawesome-free/css/all.css';
 
 Notiflix.Notify.init({
   width: '345px',
@@ -13,10 +15,16 @@ Notiflix.Notify.init({
   pauseOnHover: true,
   useFontAwesome: true,
   fontAwesomeIconStyle: 'basic',
-  fontAwesomeIconSize: '50px',
+  fontAwesomeIconSize: '35px',
+  success: {
+    background: '#3baea0',
+    fontAwesomeClassName: 'fa-solid fa-book-open',
+    fontAwesomeIconColor: '#93e4c1',
+  },
   failure: {
+    background: '#e84a5f',
     fontAwesomeClassName: 'fa-solid fa-book-skull',
-    fontAwesomeIconColor: 'black',
+    fontAwesomeIconColor: '#ff847c',
   },
 });
 
@@ -25,10 +33,6 @@ const btn = document.querySelector('.js-button');
 btn.addEventListener('click', onClick);
 
 function onClick() {
-  //   Notiflix.Notify.success('SUCCESS');
-  Notiflix.Notify.failure(
-    'Це повідомлення має свою власну іконку',
-    'Ваш текст тут',
-    'custom-icon'
-  );
+  Notiflix.Notify.success('custom-icon SUCCESS');
+  Notiflix.Notify.failure('custom-icon failure');
 }
